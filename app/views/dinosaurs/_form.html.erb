@@ -17,4 +17,7 @@
 
   <%= f.submit (@dinosaur.new_record? ? "Create" : "Update") %>
 
+  <%= f.label :valley_id %>
+  <%= f.collection_select(:valley_id, Valley.all, :id, :name) %>
+
 <% end %>
